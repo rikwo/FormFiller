@@ -6,13 +6,15 @@ from selenium.webdriver.support import expected_conditions as EC
 
 path = "C:\Users\Ricky\Desktop\chromedriver-win64\chromedriver"
 service = Service(executable_path=path)
-website = ''
+website = '' #insert URL for form that you want to fill out
 
 driver = webdriver.Chrome(service=service)
 driver.get(website)
 
+#
+
 fields = ['Name', 'Email', 'Address', 'Phone number', 'Province']
-data = ['Wai Kiu Ricky Kwong', '1005-13696 100 Avenue','wkk4@sfu.ca', '778-898-3013', 'BC']
+data = ['Wai Kiu Ricky Kwong', '','', '', 'BC']
 
 my_form = dict(zip(fields, data))
 
